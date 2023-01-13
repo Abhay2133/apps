@@ -61,6 +61,8 @@
 	color: var(--wnd);
 }
 
+@media only screen and (min-width: 720px) {
 #zip {
 	transform: scale(1.3);
+}
 }

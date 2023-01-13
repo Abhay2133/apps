@@ -8,7 +8,7 @@ export const onStart = ()=>{
 
 function pipe (e) {
 	e.preventDefault();
-	return window.open(`/pipe?link=${$(".fd-url").value}&zip=${$("#zip").checked}`);
+	return window.open(`/pipe?link=${$(".fd-url").value}${$("#zip").checked?"&zip=1":""}`);
 }
 
 onStart();
