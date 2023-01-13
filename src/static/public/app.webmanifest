@@ -1,0 +1,12 @@
+{
+   "name": "Node Pro",
+   "start_url" : "/index",
+   "display" : "standalone",
+   "icons": [
+   {
+      "src": "/icons/1024x1024.jpg",
+      "type": "image/jpg",
+      "sizes": "1024x1024"
+   }
+]
+}

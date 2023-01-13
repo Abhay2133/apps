@@ -1,0 +1,68 @@
+.snackbar {
+	position: relative;
+	transition: 0.3s ease-in;
+	background: #333;
+	/*border-radius: 6px;*/
+	height: 40px;
+	overflow: hidden;
+}
+
+/*
+.sb-body {
+	padding: 12px;
+	color: #eee;
+}*/
+
+.snackbar button {
+	display: block;
+	background: 0;
+	border: 0;
+	color: yellow;
+	margin-right: 8px;
+}
+
+.snackbar button:hover {
+	color: orange;
+}
+
+.snackbar-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: calc(100% - 4px);
+	display: none;
+	margin: 2px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.snackbar>svg {
+	background: var(--dnw-1);
+}
+
+.snackbar>svg>path {
+	fill: none;
+	position: absolute;
+	stroke: var(--wnd);
+	stroke-width: 2;
+	left: 0;
+	bottom: 0;
+}
+
+.snackbar>svg>text {
+	fill : var(--wnd);
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 720px) {
+	.snackbar {
+		left: calc(50% - 20%);
+	}
+
+	.snackbar-container {
+		margin-bottom: 3px;
+	}
+}

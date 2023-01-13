@@ -1,0 +1,24 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--dnw-0: #fff;
+		--dnw-1: #eee;
+		--dnw-2: #ddd;
+		--dnw-3: #ccc;
+		--wnd: #333;
+
+		--my-mess-bg : #bbf;
+		--mess-txt-clr: #333;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--dnw-0: #000;
+		--dnw-1: #111;
+		--dnw-2: #222;
+		--dnw-3: #333;
+
+		--my-mess-bg: hsl(210, 100%, 20%);
+		--wnd: #fff;
+	}
+}

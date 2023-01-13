@@ -1,0 +1,49 @@
+#hmbgr {
+	--size: 35px;
+	height: var(--nav-size);
+	width: var(--nav-size);
+	background: none;
+	position: relative;
+	text-align: center;
+	box-sizing: border-box;;
+	z-index: 3;
+}
+
+#hmbgr > hr {
+	--hr-H: 2px;
+	--hr-W: 25px;
+	border: none;
+	height: var(--hr-H);
+	width: var(--hr-W);
+	border-radius: 5px;
+	margin: 0;
+	transition: 0.3s;
+	transform-origin: 50% 50%;
+	position: absolute;
+	left: 10px;
+	background: #333;
+	--top : 10px;
+	--gap : 7.5px;
+}
+
+#hmbgr > hr:nth-child(1) {
+	--pos: calc(var(--top) + var(--gap));
+	top: calc(var(--pos) - var(--hr-H) / 2);
+	width: 18px;
+}
+
+#hmbgr > hr:nth-child(2) {
+	--pos: calc(var(--top) + var(--gap) * 2);
+	top: calc(var(--pos) - var(--hr-H) / 2);
+}
+
+#hmbgr > hr:nth-child(3) {
+	--pos: calc(var(--top) + var(--gap)*3);
+	top: calc(var(--pos) - var(--hr-H) / 2);
+}
+
+@media (prefers-color-scheme: dark) {
+	#hmbgr > hr {
+		background: #ccc;
+	}
+}

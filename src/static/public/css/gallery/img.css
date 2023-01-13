@@ -1,0 +1,26 @@
+/*
+#gallery {
+	text-align: center;
+}
+
+#gallery > img {
+	display: inline-block;
+	width: 80%;
+	
+}
+*/
+
+#gallery {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 10px;
+}
+
+#gallery > img {
+	max-width: calc(100% - 10px);
+	margin: auto;
+	border-radius: 5px;
+	margin-top: 10px;
+	box-shadow: inset 0 0 5px #333;
+	outline: solid;
+}

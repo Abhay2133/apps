@@ -1,0 +1,20 @@
+<form onsubmit="return false" class="fd-form">
+	<h2>Enter File URL </h2>
+	<div class="imgD-input-container">
+	<div icon="search"></div>
+	<input
+		type="url"
+		id="website_url"
+		class="fd-url"
+		placeholder="File URL"
+		required
+	/>
+	<input type="submit"
+		onclick="pressed(this)"
+		class="fd-button" value="Start" />
+	</div>
+	<center>
+		<input type="checkbox" name="zip" id="zip"> <label for="zip"> Download as Zip </label></center>
+</form>
+
+<script src="js/fd.js" type="module"></script>

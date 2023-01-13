@@ -1,0 +1,16 @@
+.imgD-form,
+.imgD-input-container,
+.imgD-input-container div,
+.imgD-input-container section,
+.login-form,
+.login-input-c div[icon],
+.login-form p,
+.user-control {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-form {
+	flex-direction: column;
+}

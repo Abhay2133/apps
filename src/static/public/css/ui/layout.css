@@ -1,0 +1,86 @@
+:root {
+	--w: 550px;
+	--nav-height: 50px;
+	height: var(--inner-height);
+	--font-weight:350;
+}
+
+* {
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+	scroll-behavior: smooth;
+	font-family: sans;
+	font-weight: var(--font-weight);
+}
+
+body {
+	perspective: 400px;
+	margin: 0;
+	height: 100%;
+	transition: opacity 0.5s;
+	transform-style: preserve-3d;
+	overflow: scroll;
+	color: var(--body-clr);
+	background: var(--body-bg);
+	background-blend-mode: multiply, multiply;
+	font-size: 1rem;
+
+	height: var(--inner-height);
+}
+
+input,
+button {
+	font-size: 1rem;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#body {
+	transition: 0.3s;
+	position: relative;
+	z-index: 8;
+	transform-origin: 50% 0%;
+	height: calc(var(--inner-height) - var(--nav-height));
+}
+
+@media only screen and (min-width: 720px) {
+	#body {
+		positon: relative;
+		width: var(--w);
+		left: calc(50% - var(--w) / 2);
+	}
+
+	:root {
+		--font-weight: 400;
+	}
+
+	#mainH {
+		font-size: 24px;
+	}
+
+	.snackbar-container {
+		width: 40%;
+		left: calc(50% - 20%);
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#body {
+		--w: 60%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: #ccc;
+		--body-bg: #001;
+	}
+}

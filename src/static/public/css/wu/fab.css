@@ -1,0 +1,110 @@
+#wa-app {
+	--fab-size: 55px;
+	--svg-size: 40%;
+}
+
+.fab {
+	height: var(--fab-size);
+	width: var(--fab-size);
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 50%;
+	transition: 0.5s;
+}
+
+.fab [icon="plus"] {
+	--fab-icon-bg: green;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transition: 0.5s;
+	background: var(--fab-icon-bg);
+}
+
+.fab [icon="plus"] svg {
+	height: var(--svg-size);
+	width: var(--svg-size);
+}
+
+.fab [icon="plus"] svg path {
+	stroke: #eee;
+	stroke-width: 8px;
+	stroke-linecap: round;
+}
+
+.fab-opts {
+	width: var(--fab-size);
+	border-radius: 40px;
+	display: flex;
+	flex-direction: column;
+
+	height: 0;
+	/*	height: 165px;*/
+	position: fixed;
+	bottom: 15px;
+	right: 10px;
+
+	opacity: 0;
+
+	overflow: hidden;
+	transition: 0.5s;
+
+	--fab-opts-bg: #91c85a;
+	background: var(--fab-opts-bg);
+}
+
+.fab-opts>div {
+	height: var(--fab-size);
+	width: var(--fab-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	--fab-opts-hover-bg: #678d00;
+	transition: 0.3s;
+}
+
+.fab-opts > div:hover{
+	transform: scale(0.95);
+}
+
+.fab-opts-hovered {
+	background: var(--fab-opts-hover-bg);
+}
+
+.fab-opts>div>svg {
+	--svg-size: 75%;
+	height: var(--svg-size);
+	width: var(--svg-size);
+}
+
+@media (prefers-color-scheme: dark) {
+
+	.fab-opts {
+		--fab-opts-bg: #222;
+	}
+
+	.fab-opts>div {
+		--fab-opts-hover-bg: #111
+	}
+
+	.fab [icon="plus"] {
+		--fab-icon-bg: #333;
+	}
+}
+
+@media only screen and (min-width: 720px) {
+	.fab-opts {
+		right: calc(50% - var(--w)/2 + 10px);
+	}
+/*
+	.fab-opts>div:hover {
+		background: var(--fab-opts-hover-bg);
+	}*/
+}

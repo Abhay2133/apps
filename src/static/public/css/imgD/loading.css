@@ -1,0 +1,54 @@
+
+#imgD-loading > span {
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	min-height: var(--s);
+}
+
+hr.spinner {
+	display: inline-block;
+	height: var(--s);
+	width: var(--s);
+	border: 5px solid rgba(0,0,0,0.3);
+	border-top-color: var(--wnd);
+	animation: rot 1s linear infinite;
+	border-radius: 50%;
+	margin: 0;
+	padding: 0;
+}
+
+#imgD-loading {
+	--s: 25px;
+	justify-content: center;
+	overflow:hidden;
+	transition: 1s;
+	background: 0;
+	padding: 0;
+	transition: 500ms;
+	display: flex;
+}
+
+.show-loader {
+	height: 35px;
+	padding: 5px 0;
+	margin: 10px;
+}
+
+#imgD-info hr.spinner {
+	--s: 20px;
+	display: block;
+	height: var(--s);
+	width: var(--s);
+	box-sizing: border-box;
+	border-width: 3px;
+	border-top-color: green;
+}
+
+.spinner-icon spinner-cont , .dl-icon [icon]{
+	display: block;
+}
+
+.spinner-icon [icon] ,   .dl-icon .spinner-cont {
+	display: none;
+}

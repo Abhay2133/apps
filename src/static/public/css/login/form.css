@@ -1,0 +1,68 @@
+.login-form {
+	box-shadow: 0 0 5px #444;
+	border-radius: 5px;
+	padding-bottom: 30px;
+	margin: 10px;
+	background: var(--dnw-2);
+}
+
+.login-form>h3 {
+	padding: 10px 20px;
+	font-size: 1.5rem;
+}
+
+.login-input-c {
+	border-radius: 5px;
+	display: flex;
+	background: var(--dnw-1);
+	margin: 5px 20px;
+	position: relative;
+	width: 70%;
+}
+
+.login-input-c div[icon] {
+	height: 40px;
+	width: 40px;
+}
+
+.login-input-c div[icon] svg {
+	height: 80%;
+	width: 80%;
+}
+
+.login-input-c input {
+	padding: 10px;
+	border-radius: 5px;
+	border: 0;
+	background: none;
+	width: calc(100% - 40px);
+}
+
+.login-form button {
+	background: green;
+	padding: 8px 20px;
+	font-size: 0.8rem;
+	color: #fff;
+}
+
+.login-form [icon=user] svg * {
+	stroke-width: 4;
+}
+
+.login-form [icon=eye] {
+	position: relative;
+	right: 0;
+	background: inherit;
+}
+
+.login-form p input {
+	margin-right: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+	.login-form [icon=user] svg * {
+		stroke-width: 3;
+	}
+
+}

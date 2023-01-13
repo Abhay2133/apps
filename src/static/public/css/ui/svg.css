@@ -1,0 +1,57 @@
+div[icon="user"]>svg {
+	--stroke-size: 3;
+	--size: 100%;
+	height: var(--size);
+	width: var(--size);
+	border-radius: 5px;
+	background: none;
+}
+
+div[icon="user"]>svg * {
+	stroke-width: var(--stroke-size);
+	fill: none;
+	stroke-linecap: round;
+}
+
+/*		Group 		*/
+
+[icon="group"]>svg>* {
+	fill: none;
+	stroke-width: 3;
+}
+
+/* SEARCH */
+
+[icon="search"] svg * {
+	fill: none;
+}
+
+[icon="search"] svg circle {
+	stroke-width: 4;
+}
+
+[icon="search"] svg path {
+	stroke-width: 8;
+}
+
+/*	LOCK */
+
+[icon=lock] svg * {
+	stroke-width: 1;
+}
+
+/*		Path WITHD	s*/
+
+[icon=lock] svg *,
+[icon=mail] svg *,
+[icon=eye] svg * {
+	stroke-width: 0.01;
+	fill: var(--wnd);
+}
+
+/* GLOBAL SETTINGS */
+
+svg>* {
+	stroke: var(--wnd);
+	stroke-width: 0.01;
+}

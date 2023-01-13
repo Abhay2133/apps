@@ -1,0 +1,5 @@
+{
+  "verbose": false,
+  "ignore": ["*.test.js", "fixtures/*", "*.json", "src/static/*"],
+  "ext"  : "js"
+}

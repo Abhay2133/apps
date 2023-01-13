@@ -1,0 +1,8 @@
+src/static/files
+node_modules
+src/bin/apps/ytdl/*.json
+src/static/public/versions.json
+src/static/views/versions.json
+.vscode
+src/static/public/gallery/*
+package-lock.json

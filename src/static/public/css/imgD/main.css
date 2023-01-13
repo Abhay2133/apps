@@ -1,0 +1,37 @@
+.imgD-container {
+	margin: 10px;
+	padding: 10px;
+	/*	background: rgba(200, 27, 10, 0.4);*/
+	background-color: #85FFBD;
+	background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+	border-radius: 5px;
+}
+
+.imgD-container form {
+	margin: 30px 0 10px 0;
+}
+
+.imgD-heading {
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #FBAB7E;
+	background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+
+	color: #333;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.imgD-container>hr {
+	border: 0;
+	border-top: 1px solid;
+	margin: 20px 0;
+}
+
+.collapse {
+	height: 0 !important;
+	padding: 0 !important; 
+	margin: 0 !important;
+}

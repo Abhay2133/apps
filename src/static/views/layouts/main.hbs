@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>{{{title}}}</title>
+<meta name="viewport" content="width=device-width" />
+<meta name="description" content="Node  Project Hub">
+<link rel="manifest" href="/app.webmanifest">
+<head>
+{{#if (isPro)}}
+<script> 
+if ( location.href.startsWith("http:") && ! location.href.includes(":3000")) 
+	location.href = "https" + location.href.slice(4); 
+</script >
+{{/if}}
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/css/" />
+</head>
+<body>
+	
+<nav id="mainNav" class="mainNav">
+	<div id="hmbgr" onclick="hmbgr.t(() => sp.t())"> <hr /><hr /><hr /> </div>
+	<div id="mainH">
+		{{{mainHeading}}}
+	</div>
+	<div class="user-control">
+		<div icon="user"></div>
+		<div class="uc-menu">
+			<div class="uc-ls">
+				<a href="/login" >LOGIN </a> / 
+				<a href="/signup">SIGNUP</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div id="sidePanel" class='sidePanel hidden-side-panel'>
+	<a href="/"  class="item"> HOME </a>
+	<div class="item"> Contact me </div>
+	<div class="item"> About me </div>
+</div>
+
+	<main id="body" class="viewport">
+	{{{body}}}
+	</main>
+	<div class="snackbar-container" style="display:none;">
+		<div class="snackbar" onclick="snkbr.hide()">
+		</div>
+	</div>
+</body>
+
+<script>
+const isDev = {{{isDev}}};
+const __appV = {{{appV}}};
+
+{{#if (isDev)}}
+(new Worker("/js/liveReload.js")).onmessage = function () {
+	location.href = location.href;
+}
+{{/if}}
+
+if ('serviceWorker' in navigator)
+	navigator.serviceWorker.register('/sw')
+	.then(e => console.log("SW reistered !"))
+</script>
+<script type="module" src="/js/main.js" async></script>
+</html>

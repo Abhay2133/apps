@@ -1,0 +1,52 @@
+<div id="wa-app">
+	<div class="chats-container">
+		<div class="search-bar">
+			<div>
+				<div icon="search"></div><input id="wu-search" placeholder='Search a Chat' />
+			</div>
+		</div>
+		<div id="chat-list">
+			<div class="chat">
+				<div icon="user">chat-logo</div>
+				<div class="chat-info">
+					<div class="chat-name"> Abhay </div>
+					<div class="last-mess"> Good Bye </div>
+				</div>
+				<div class="new-mess">2</div>
+			</div>
+		</div>
+		<div id="user-list">
+			<div class="chat">
+				<div icon="user">chat-logo</div>
+				<div class="chat-info">
+					<div class="chat-name"> Saitama </div>
+					<div class="status">Life is Boat, which sails on your deisions aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa </div>
+				</div>
+			</div>
+		</div>
+		<div class="fab">
+			<div class="fab-opts">
+				<div icon="group" onclick="usr_menu.t(this, gm)"></div>
+				<div icon="user" onclick="usr_menu.t(this)"></div>
+				<div></div>
+			</div>
+			<div icon="plus" onclick="t_fab.t()"></div>
+		</div>
+	</div>
+
+	<div class="messenger">
+		<section class="chat-history">
+			<section class ='chat-history-wrapper'>
+				<div class="my-mess"><span class="mess-txt"> Hi Bro</span> </div>
+				<div class="ur-mess"><span class="mess-txt"> Fine, Whats Up</span> </div>
+				<div class="my-mess"><span class="mess-txt"> Just Chilling </span> </div>
+				<div class="ur-mess"><span class="mess-txt"> Bye Bro !</span> </div>
+			</section>
+		</section>
+		<form onsubmit="return false;" class="mess-input">
+			<div class="m-i-icon" icon="pin1"></div>
+			<input type="text" class="m-i-text" required />
+			<div class="m-i-btn" icon="send"></div>
+		</form>
+	</div>
+</div>

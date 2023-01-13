@@ -1,0 +1,66 @@
+.fd-form {
+	display: block;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.2);
+	padding: 10px;
+	margin: 10px;
+	position: relative;
+}
+
+.fd-form > h2 {
+	width: 80%;
+	position: relative;
+	left: calc(50% - 40%);
+	font-weight: 300;
+	font-size: 22px;
+	margin: 10px 0;
+	padding: 5px;
+	color: #555;
+	text-align: center;
+}
+
+.fd-button {
+	background: #19B61F;
+}
+
+.fd-form > center {
+	padding: 10px;
+}
+
+.fd-form > center > [type=checkbox] {
+	position: relative;
+	top: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.fd-form {
+		background: rgba(100,100,100,0.4);
+	}
+	
+	.fd-form > h2 {
+		color: #ccc;
+	}
+}
+
+.fd-dbtn {
+	background: darkgreen;
+	color: #fff;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 5px;
+	box-shadow:  0 5px 0 #0D5000;
+	opacity: 0;
+}
+
+.fd-dbtn:active {
+	box-shadow:  0 1px 0 #0D5000;
+	transform: translateY(4px);
+}
+
+.fd-url {
+	color: var(--wnd);
+}
+
+#zip {
+	transform: scale(1.3);
+}
