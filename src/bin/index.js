@@ -1,7 +1,7 @@
-const fs = require("node:fs");
-const path = require("node:path")
-const {networkInterfaces} = require("node:os")
-const {createServer} = require("node:http")
+const fs = require("fs");
+const path = require("path")
+const {networkInterfaces} = require("os")
+const {createServer} = require("http")
 
 global.isPro = (process.env.NODE_ENV || "").toLowerCase() === "production";
 global.imgDsessions = {};
@@ -19,7 +19,7 @@ const exp = require("express");
 const bodyParser = require("body-parser");
 const compression = require("compression");
 const {logger, liveReload} = require("./mods/hlpr");
-const {exec} = require("node:child_process");
+const {exec} = require("child_process");
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
 const {router} = require("./mods/routes");
