@@ -13,7 +13,11 @@ global.basename = path.basename;
 global.sdir = path.resolve("src", "static");
 global.pdir = j(sdir, "public");
 global._port = process.env.PORT || 3000;
+<<<<<<< Updated upstream
 global.version = process.env.app_version || 0;
+=======
+global.__appV = 1;
+>>>>>>> Stashed changes
 
 const colors = require("colors");
 const exp = require("express");
@@ -41,7 +45,6 @@ module.exports = async function () {
     };
 
   global.stdout = (...a) => process.stdout.write(a.join(" "));
-  if (typeof global.__appV == "undefined") global.__appV = 0;
 
   if (fs.existsSync(j(sdir, "files")))
     fs.rm(j(sdir, "files"), { recursive: true }, () => {});
@@ -61,7 +64,6 @@ module.exports = async function () {
   app.use(exp.static(j(sdir, "public")));
   app.use(exp.json());
   app.use(compression());
-  if (typeof global.__c4u !== "undefined") app.use(__c4u);
 
   app.use(router);
   require("./mods/socketHandler")(io);
@@ -70,7 +72,7 @@ module.exports = async function () {
     let ni = networkInterfaces();
     let ms = 15;
     log("Server is onine xD");
-    log("  MODE %s : %s v%s", " ".repeat(ms - 4), isPro ? "PRO" : "DEV", version+'');
+    log("  MODE %s : %s v%s", " ".repeat(ms - 4), isPro ? "PRO" : "DEV", __appV+'');
     for (let key in ni)
       ni[key].forEach((item, i) => {
         if (item.family == "IPv4")
