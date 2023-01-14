@@ -1,4 +1,4 @@
-const fs = require("node:fs");
+const fs = require("fs");
 const logger = require("./logger");
 const liveReload = require("./liveReload")
 const css = require("./css");
