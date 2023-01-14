@@ -46,7 +46,7 @@ router.get("/505", (req, res) => res.status(505).end());
 router.post("/kill", (req,res)=> {
 	let code = req.body?.code;
 	let delay = req.body?.delay || 0;
-	let killed = code === process.env.np_kill_code;
+	let killed = code === process.env.node_kill_code;
 	if(killed) res.on("finish", ()=> {
 		log(require("colors").red("Server is Dead !"));
 		process.exit();
