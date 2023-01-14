@@ -13,7 +13,7 @@ global.basename = path.basename;
 global.sdir = path.resolve("src", "static");
 global.pdir = j(sdir, "public");
 global._port = process.env.PORT || 3000;
-
+global.version = process.env.version || 0;
 const colors = require("colors");
 const exp = require("express");
 const bodyParser = require("body-parser");
@@ -69,7 +69,7 @@ module.exports = async function () {
     let ni = networkInterfaces();
     let ms = 15;
     log("Server is onine xD");
-    log("  MODE %s : %s", " ".repeat(ms - 4), isPro ? "PRO" : "DEV");
+    log("  MODE %s : %s v%s", " ".repeat(ms - 4), isPro ? "PRO" : "DEV", version+'');
     for (let key in ni)
       ni[key].forEach((item, i) => {
         if (item.family == "IPv4")
