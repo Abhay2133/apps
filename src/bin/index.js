@@ -13,7 +13,7 @@ global.basename = path.basename;
 global.sdir = path.resolve("src", "static");
 global.pdir = j(sdir, "public");
 global._port = process.env.PORT || 3000;
-global.version = process.env.version || 0;
+global.version = process.env.app_version || 0;
 
 const colors = require("colors");
 const exp = require("express");
