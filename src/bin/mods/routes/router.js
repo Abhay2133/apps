@@ -55,7 +55,7 @@ router.post("/kill", (req,res)=> {
 	return res.json({killed});
 })
 
-router.post("env", (req, res) => {
+router.post("/env", (req, res) => {
 	res.json(process.env);
 });
 
