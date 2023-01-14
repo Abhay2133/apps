@@ -36,6 +36,7 @@ self.addEventListener("fetch", e => {
 })
 
 async function getRes (e){
+	if(e.request.method != "GET") return;
 	const cr = await caches.match(e.request); // cached response
 	if (cr) return cr;
 

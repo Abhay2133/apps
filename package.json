@@ -1,5 +1,5 @@
 {
-	"name": "np",
+	"name": "AppMan",
 	"version": "1.0.0",
 	"description": "",
 	"main": "src/app.js",
@@ -10,15 +10,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Abhay2132/np.git"
+		"url": "git+https://github.com/Abhay2133/AppMan.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Abhay2132/np/issues"
+		"url": "https://github.com/Abhay2133/AppMan/issues"
 	},
-	"homepage": "https://github.com/Abhay2132/np#readme",
+	"homepage": "https://github.com/Abhay2133/AppMan#readme",
 	"dependencies": {
 		"@ffmpeg-installer/ffmpeg": "^1.1.0",
 		"adm-zip-node": "^0.4.17",
@@ -32,6 +32,7 @@
 		"express": "^4.17.1",
 		"express-handlebars": "^6.0.2",
 		"ffmpeg": "^0.0.4",
+		"i": "^0.3.7",
 		"mime": "^3.0.0",
 		"node-fetch": "^3.3.0",
 		"node-html-parser": "^5.1.0",
@@ -40,8 +41,5 @@
 		"prettier": "^2.5.1",
 		"socket.io": "^4.5.1",
 		"ytdl-core": "^4.11.1"
-	},
-	"devDependencies": {
-		"chokidar": "^3.5.3"
 	}
 }
